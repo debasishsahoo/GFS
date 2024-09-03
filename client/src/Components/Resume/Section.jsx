@@ -4,6 +4,7 @@ const Section = (props) => {
   return (
     <section>
       <h2>{props.headline}</h2>
+
       {props.para ? <p>{props.para}</p> : ""}
 
       {props.data ? (
