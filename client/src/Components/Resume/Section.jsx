@@ -4,11 +4,16 @@ const Section = (props) => {
   return (
     <section>
       <h2>{props.headline}</h2>
-      <p>{props.para}</p>
-      <ul>
-        <li>{props.li1}</li>
-        <li>{props.li2}</li>
-      </ul>
+      {props.para ? <p>{props.para}</p> : ""}
+
+      {props.data ? (
+        <ul>
+          <li>{props.data.li1}</li>
+          <li>{props.data.li2}</li>
+        </ul>
+      ) : (
+        ""
+      )}
     </section>
   );
 };
