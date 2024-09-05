@@ -7,8 +7,8 @@ const LeftComponent = (props) => {
         src={props.img_src}
         alt={props.img_alt}
       />
-      <i class="fa fa-long-arrow-left"></i>
-      <i class="fa fa-long-arrow-right"></i>
+      <i className="fa fa-long-arrow-left"></i>
+      <i className="fa fa-long-arrow-right"></i>
     </div>
   );
 };

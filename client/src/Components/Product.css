@@ -141,6 +141,17 @@ ul li {
   transition: 0.3s all ease;
 }
 
+.red {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: #ca1302;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: 0.3s all ease;
+}
+
+
 .yellow:hover,
 .black:hover,
 .blue:hover {

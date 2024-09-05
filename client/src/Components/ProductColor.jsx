@@ -1,10 +1,13 @@
 import React from 'react'
 
 const ProductColor = (props) => {
+  const listOfColor=props.colors.map((color,index)=>{
+    return <li className={color} key={index}></li>
+  });
     return (
         <ul>
           <li>COLOR</li>
-          <li className="yellow"></li>
+          {listOfColor}
         </ul>
     )
 }

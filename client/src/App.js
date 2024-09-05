@@ -14,8 +14,8 @@ function App() {
   headline2='Men Black Sneakers'
   price1={150}
   price2={200}
-  size={[7,8,9,10,11]}
-  color={['yellow','black','blue']}
+  sizes={[7,8,9,10,11]}
+  colors={['yellow','black','blue','red']}
   button1='Buy Now'
   button2='Add TO Cart'
   />
