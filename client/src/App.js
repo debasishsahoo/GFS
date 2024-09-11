@@ -4,7 +4,8 @@ import React from "react";
 //import Clock from "./Components/Clock";
 //import ShowHide from './Components/ShowHide.jsx'
 //import MapComponent from './Components/list/MapComponent'
-import FilterComponent from './Components/list/FilterComponent'
+//import FilterComponent from './Components/list/FilterComponent'
+import ForEachComponent from './Components/list/ForEachComponent'
 function App() {
   return (
     <>
@@ -13,7 +14,9 @@ function App() {
       {/* <Clock /> */}
       {/* <ShowHide/> */}
       {/* <MapComponent/> */}
-      <FilterComponent/>
+      {/* <FilterComponent/> */}
+
+      <ForEachComponent/>
 
     </>
   );
