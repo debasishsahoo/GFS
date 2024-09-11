@@ -35,6 +35,24 @@ const List1 = () => {
 
   //Math.sqrt(4),Math.sqrt(9),Math.sqrt(16),Math.sqrt(25),
 
+  //Advance MAp Coding......
+  const kvArray = [
+    { key: 1, value: 10 },
+    { key: 2, value: 20 },
+    { key: 3, value: 30 },
+    { key: 4, value: 40 },
+  ];
+
+  const reformatedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
+  //console.log(reformatedArray)
+  //console.log(kvArray)
+
+
+  const strArray=['1','2','3','4'];
+
+  console.log(strArray)
+  console.log(strArray.map(parseInt))
+  console.log(strArray.map((str)=>parseInt(str,10)))
 
 
 
@@ -49,9 +67,8 @@ const List1 = () => {
       <br />
       <ol>{timesList}</ol>
 
-      <ul>
-        {printFullName}
-      </ul>
+      <ul>{printFullName}</ul>
+      <br />
     </>
   );
 };
