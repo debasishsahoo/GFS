@@ -35,6 +35,14 @@ const List1 = () => {
 
   //Math.sqrt(4),Math.sqrt(9),Math.sqrt(16),Math.sqrt(25),
 
+
+
+
+
+
+
+  
+
   return (
     <>
       <ul>{sqrtNum2}</ul>
