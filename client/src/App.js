@@ -7,6 +7,11 @@ import React from "react";
 
 import EnumState from "./Components/ConditionalRendiring/ConditionalEnum.jsx";
 
+import StateFull from './Components/ConditionalRendiring/StateFull.jsx'
+
+
+
+
 function App() {
   // let isLogin=false
   return (
@@ -16,7 +21,8 @@ function App() {
       {/* <Garage cars={['FORD','BMW','AUDI']}/> */}
 
       {/* <NotificationMsg name={'Shubha'}/> */}
-      <EnumState state={'dashboard'}/>
+      {/* <EnumState state={'dashboard'}/> */}
+      <StateFull/>
     </>
   );
 }
