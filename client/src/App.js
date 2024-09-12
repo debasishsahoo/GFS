@@ -1,22 +1,14 @@
 import React from "react";
-//import Card from "./Components/Card";
-//import Counter from './Components/Counter'
-//import Clock from "./Components/Clock";
-//import ShowHide from './Components/ShowHide.jsx'
-//import MapComponent from './Components/list/MapComponent'
-//import FilterComponent from './Components/list/FilterComponent'
-import ForEachComponent from './Components/list/ForEachComponent'
+import IF_Statement from './Components/ConditionalRendiring/IF_Statement'
+import TernaryOperator from './Components/ConditionalRendiring/TernaryOperator'
+import Garage from './Components/ConditionalRendiring/Logical&&Operator'
 function App() {
+  let isLogin=false
   return (
     <>
-      {/* <Card /> */}
-      {/* <Counter/> */}
-      {/* <Clock /> */}
-      {/* <ShowHide/> */}
-      {/* <MapComponent/> */}
-      {/* <FilterComponent/> */}
-
-      <ForEachComponent/>
+    {/* <IF_Statement data={false}/> */}
+    {/* <TernaryOperator isLoggedIn={isLogin?true:false}/> */}
+    <Garage cars={['FORD','BMW','AUDI']}/>
 
     </>
   );
