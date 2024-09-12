@@ -9,7 +9,7 @@ import EnumState from "./Components/ConditionalRendiring/ConditionalEnum.jsx";
 
 import StateFull from './Components/ConditionalRendiring/StateFull.jsx'
 
-
+import PreventRender from './Components/ConditionalRendiring/PreventRender.jsx'
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
       {/* <NotificationMsg name={'Shubha'}/> */}
       {/* <EnumState state={'dashboard'}/> */}
       <StateFull/>
+      <PreventRender/>
     </>
   );
 }
