@@ -1,0 +1,28 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "item": "REACT"
+    },
+    {
+      "id": 2,
+      "item": "Angular"
+    },
+    {
+      "id": 3,
+      "item": "javascript"
+    },
+    {
+      "id": 4,
+      "item": "Node"
+    },
+    {
+      "id": 5,
+      "item": "HTML"
+    },
+    {
+      "id": 6,
+      "item": "CSS"
+    }
+  ]
+}
