@@ -13,3 +13,6 @@ td,th{
 tr:nth-child(even){
 background-color: #dddddd;
 }
+.wrapper{
+    padding: 30px;
+}
