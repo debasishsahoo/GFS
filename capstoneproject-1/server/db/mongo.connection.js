@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
-
-const dbUrl = "mongodb://127.0.0.1:27017/capstone1";
-
+require('dotenv').config()
 mongoose
-  .connect(dbUrl)
+  .connect(process.env.DBURL)
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
