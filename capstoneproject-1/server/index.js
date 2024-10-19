@@ -13,6 +13,9 @@ const morgan = require("morgan");
 //be sure to ignore the .env file in github
 require("dotenv").config();
 
+const adminRouter=require('./src/routes/admin.route')
+
+
 //Create App
 const app = express();
 
@@ -43,6 +46,8 @@ app.use(morgan("combined")); //use combined or tiny
 app.use("/api/health-check", (req, res) => {
   res.send("App is Working");
 });
+
+app.use("/api/admin",adminRouter)
 
 
 //App Server Connection
