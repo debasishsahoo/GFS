@@ -1,0 +1,18 @@
+create a folder name it capstone-project-1
+under that folder create another folder name server
+open server folder in vs code
+
+
+terminal command
+npm init
+
+now install all packages you need
+
+npm install express
+
+npm i express body-parser cors dotenv helmet mongoose morgan
+
+npm i nodemon --save-dev
+
+to close the server press ctrl+c 
+yes

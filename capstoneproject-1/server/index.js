@@ -1,5 +1,5 @@
-require("./db/mongo.connection");
-
+//Need to Pass DB Connection at the Top
+require("./src/db/mongo.connect");
 //The Javascript framework to create APIs
 const express = require("express");
 
@@ -13,11 +13,11 @@ const morgan = require("morgan");
 //be sure to ignore the .env file in github
 require("dotenv").config();
 
-//App
+//Create App
 const app = express();
 
 //App MiddleWare
-const WhiteList = ["*"];
+const WhiteList = ["*"]; // '*' is for only Dev Env but in Server Env we need to pass proper IP address
 
 const corsOption = {
   origin: function (origin, callback) {
@@ -38,9 +38,12 @@ app.use(bodyParser.json());
 //log request
 app.use(morgan("combined")); //use combined or tiny
 
+
+//App Routing 
 app.use("/api/health-check", (req, res) => {
   res.send("App is Working");
 });
+
 
 //App Server Connection
 app.listen(process.env.PORT, () =>
