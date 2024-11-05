@@ -126,11 +126,68 @@ const signIn = async (req, res) => {
   }
 };
 
-const signOut = async (req, res) => {};
+const signOut = async (req, res) => {
+  try {
+    return res.clearCookie("token").status(200).send({
+      message: "success",
+      error: null,
+      data: [],
+    });
+  } catch (err) {
+    return res.status(500).send({
+      message: "failure",
+      error: err.message || err,
+    });
+  }
+};
 
-const getAdmins = async (req, res) => {};
-const getAdminById = async (req, res) => {};
-const getAdminByQuery = async (req, res) => {};
+const getAdmins = async (req, res) => {
+  try {
+    const allAdmin = await AdminService.getAllRecord();
+    if (!allAdmin) {
+      return res.status(404).send({
+        message: "No Data Found",
+        error: null,
+        data: [],
+      });
+    }
+    const count = allAdmin.length;
+    return res.status(200).send({
+      message: `Success,${count} Data Found`,
+      error: null,
+      data: allAdmin,
+    });
+  } catch (error) {
+    return res.status(500).send({ message: "failure", error: error, data: [] });
+  }
+};
+
+const getAdminById = async (req, res) => {
+  const adminId = req.params.id;
+  if (mongoose.isValidObjectId(adminId)) {
+    try {
+      const singleAdmin = await AdminService.getOneRecordByID(adminId);
+      if (!singleAdmin) {
+        return res.status(404).send({
+          message: "No Data Found with this ID",
+          error: null,
+          data: [],
+        });
+      }
+      return res
+        .status(200)
+        .send({ message: "success", error: null, data: singleAdmin });
+    } catch (error) {
+      return res
+        .status(500)
+        .send({ message: "failure", error: "id is Not Valid", data: null });
+    }
+  }
+};
+
+const getAdminByQuery = async (req, res) => {
+
+};
 
 const updateAdminById = async (req, res) => {};
 const deleteAdminById = async (req, res) => {};
