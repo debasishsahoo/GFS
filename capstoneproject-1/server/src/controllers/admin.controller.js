@@ -185,12 +185,59 @@ const getAdminById = async (req, res) => {
   }
 };
 
-const getAdminByQuery = async (req, res) => {
+const getAdminByQuery = async (req, res) => {};
 
+const updateAdminById = async (req, res) => {
+  const adminId = req.params.id;
+  if (mongoose.isValidObjectId(adminId)) {
+    try {
+      const { name, image, isAdmin } = req.body;
+      const singleAdmin = await AdminService.getOneRecordByID(adminId);
+      if (!singleAdmin) {
+        return res.status(404).send({
+          message: "No Data Found with this ID",
+          error: null,
+          data: [],
+        });
+      }
+      const updateOldAdmin = await AdminService.updateOneRecordById(adminId, {
+        name,
+        image,
+        isAdmin,
+      });
+      return res
+        .status(200)
+        .send({ message: "success", error: null, data: updateOldAdmin });
+    } catch (error) {
+      return res
+        .status(500)
+        .send({ message: "failure", error: "id is Not Valid", data: null });
+    }
+  }
 };
+const deleteAdminById = async (req, res) => {
+  const adminId = req.params.id;
+  if (mongoose.isValidObjectId(adminId)) {
+    try {
+      const deleteAdmin = await AdminService.DeleteOneRecordById(adminId);
+      if (!deleteAdmin) {
+        return res.status(404).send({
+          message: "No Data Found with this ID",
+          error: null,
+          data: [],
+        });
+      }
 
-const updateAdminById = async (req, res) => {};
-const deleteAdminById = async (req, res) => {};
+      return res
+        .status(200)
+        .send({ message: "success", error: null, data: deleteAdmin });
+    } catch (error) {
+      return res
+        .status(500)
+        .send({ message: "failure", error: "id is Not Valid", data: null });
+    }
+  }
+};
 
 module.exports = {
   signUp,
