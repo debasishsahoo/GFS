@@ -1,0 +1,38 @@
+1 .Backend(http://localhost:6000)
+     MODEL
+1.USER  2.PRODUCT
+
+   CONTROLLER
+USER->login,Registration,logout,PasswordChange,SessionManagement
+PRODUCT-> INSERT,UPDATE,DELETE,VIEW(list of Product,Single Product)
+
+   MIDDLEWARE
+   AuthGuard
+
+    ROUTER
+USER    -->POST(Registration,login),GET(logout),PUT(PasswordChange),
+
+PRODUCT  ->POST(INSERT), GET(list of Product,Single Product),  PUT(UPDATE), DELETE(DELETE)
+
+
+2 .Frontend(http://localhost:3000)
+
+App.css
+
+SERVICE  ->  Axios to Call http://localhost:6000
+
+CONTEXT ->    AUTH
+
+Components  ->
+
+USER(SignIn,SignUp,ChangePassword)
+PRODUCT(CreateProduct,UpdateProduct,DeleteProduct,ListViewProduct,SingleView)
+
+
+
+
+
+
+
+
+

@@ -180,8 +180,12 @@ const getAdminById = async (req, res) => {
     } catch (error) {
       return res
         .status(500)
-        .send({ message: "failure", error: "id is Not Valid", data: null });
+        .send({ message: "failure", error: `${error}`, data: null });
     }
+  }else{
+    return res
+        .status(500)
+        .send({ message: "failure", error: `${error}`, data: null });
   }
 };
 
