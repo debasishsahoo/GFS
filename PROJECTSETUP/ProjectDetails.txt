@@ -14,6 +14,19 @@ USER    -->POST(Registration,login),GET(logout),PUT(PasswordChange),
 
 PRODUCT  ->POST(INSERT), GET(list of Product,Single Product),  PUT(UPDATE), DELETE(DELETE)
 
+Commands
+  
+
+  npm init -y
+
+npm i express mongoose cors dotenv body-parser bcryptjs jsonwebtoken
+npm i nodemon --save-dev
+
+
+
+
+
+
 
 2 .Frontend(http://localhost:3000)
 
