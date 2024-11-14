@@ -28,6 +28,17 @@ Components  ->
 USER(SignIn,SignUp,ChangePassword)
 PRODUCT(CreateProduct,UpdateProduct,DeleteProduct,ListViewProduct,SingleView)
 
+Commands
+
+1. npx create-react-app frontend
+
+after create react app complete run   cd frontend then 
+2. npm i axios
+3. npm i react-router-dom
+
+
+
+
 
 
 
