@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 import api, { setAuthToken } from "../Services/Api";
 
+
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
