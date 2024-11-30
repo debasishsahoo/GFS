@@ -1,0 +1,14 @@
+Auth
+POST 127.0.0.1:5000/api/auth/signup 
+POST 127.0.0.1:5000/api/auth/signin
+POST 127.0.0.1:5000/api/auth/change-password
+GET  127.0.0.1:5000/api/auth/user
+
+
+
+Product api
+POST 127.0.0.1:5000/api/product/add
+GET  127.0.0.1:5000/api/product/view
+GET  127.0.0.1:5000/api/product/view/:id
+PUT  127.0.0.1:5000/api/product/update/:id
+DELETE 127.0.0.1:5000/api/product/delete/:id

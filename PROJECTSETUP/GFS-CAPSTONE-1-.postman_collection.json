@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "eac84636-5c8a-4b40-8ffc-e739c3957e35",
+		"name": "GFS/CAPSTONE-1/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14840080"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "AddProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGIxNTA5MDZhNmQzZGQ2OWU3YjFjZSIsImlhdCI6MTczMjk3MzkwNiwiZXhwIjoxNzMyOTc3NTA2fQ.mvZqPBp7EmUx0MQLCTEmabDTO3kvrNeAqEeAcreDWCA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"HP\",\r\n    \"desc\":\"HP Laptop\",\r\n    \"price\":\"80000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/product/add",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ViewProduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:5000/api/product/view",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"view"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ViewProductById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGIxNTA5MDZhNmQzZGQ2OWU3YjFjZSIsImlhdCI6MTczMjk3MzkwNiwiZXhwIjoxNzMyOTc3NTA2fQ.mvZqPBp7EmUx0MQLCTEmabDTO3kvrNeAqEeAcreDWCA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/product/view/674b15dc06a6d3dd69e7b1d1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"view",
+										"674b15dc06a6d3dd69e7b1d1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateProduct",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"HCL\",\r\n    \"desc\":\"HCL Laptop\",\r\n    \"price\":\"84000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/product/update/674b164406a6d3dd69e7b1d4",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"update",
+										"674b164406a6d3dd69e7b1d4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteProduct",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:5000/api/product/delete/674b164406a6d3dd69e7b1d4",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"delete",
+										"674b164406a6d3dd69e7b1d4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"b@b.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/auth/signin",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"b@b.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/auth/signup",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ChangePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGIxNTA5MDZhNmQzZGQ2OWU3YjFjZSIsImlhdCI6MTczMjk3NDg4NSwiZXhwIjoxNzMyOTc4NDg1fQ.jam3qgZppRlzjhyJUM1XOEFoEVK-Xv96NjsNmIwRq_g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\":\"123456\",\r\n    \"newPassword\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:5000/api/auth/change-password",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
