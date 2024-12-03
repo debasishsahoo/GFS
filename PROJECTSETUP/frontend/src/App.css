@@ -202,6 +202,18 @@
 	border-radius: 5px;
 	cursor: pointer;
   }
+   .danger {
+	width: 50%;
+	padding: 5px;
+	background-color: #d12525;
+	color: white;
+	border: none;
+	border-radius: 1px;
+	cursor: pointer;
+  }
+  .danger:hover {
+	background-color: #f13a36;
+  }
   
   .register .error {
 	color: red;
