@@ -6,7 +6,7 @@ const SignUp = () => {
   const { signUp } = useContext(AuthContext);
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
-    username: "",
+    email: "",
     password: "",
   });
   const [error, SetError] = useState(null);
@@ -30,9 +30,9 @@ const SignUp = () => {
       <form onSubmit={handelSubmit}>
         <input
           type="email"
-          name="username"
-          placeholder="UserName"
-          value={credentials.username}
+          name="email"
+          placeholder="Email"
+          value={credentials.email}
           onChange={handelChange}
           required
         />

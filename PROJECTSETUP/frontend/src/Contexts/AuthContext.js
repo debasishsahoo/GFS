@@ -32,13 +32,16 @@ const AuthProvider = ({ children }) => {
     setAuthToken(res.data.token);
     setUser(res.data.user);
   };
+  const change_password = async (credentials) => {
+     await api.put("/auth/change-password", credentials);
+  };
   const signOut = async () => {
     setUser(null);
     setAuthToken(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, signUp, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, signUp, signIn,change_password, signOut }}>
       {children}
     </AuthContext.Provider>
   );

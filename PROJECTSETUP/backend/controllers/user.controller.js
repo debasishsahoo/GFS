@@ -56,7 +56,7 @@ const UserController = {
       const isMatch = await bcrypt.compare(oldPassword, user.password);
 
       if (!isMatch) {
-        return res.status(400).json({ message: "Old Password id InCorrect" });
+        return res.status(400).json({ message: "Old Password id Incorrect" });
       }
 
       user.password = await bcrypt.hash(newPassword, 10);
