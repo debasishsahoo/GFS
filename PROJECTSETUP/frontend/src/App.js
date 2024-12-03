@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import SignUp from "./Components/User/SignUp";
 import SignIn from "./Components/User/SignIn";
+import SignOut from "./Components/User/SignOut";
 import ChangePassword from "./Components/User/ChangePassword";
 import Product from "./Components/Product/Product";
 import ProductDetails from "./Components/Product/ProductDetails";
@@ -22,7 +23,15 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/change-password" element={<ChangePassword />} />
 
-            <Route path="/product" element={<Product />} />
+            <Route
+              path="/product"
+              element={
+                <>
+                  <SignOut />
+                  <Product />
+                </>
+              }
+            />
             <Route path="/product/details/:id" element={<ProductDetails />} />
             <Route path="/product/update/:id" element={<UpdateProduct />} />
 

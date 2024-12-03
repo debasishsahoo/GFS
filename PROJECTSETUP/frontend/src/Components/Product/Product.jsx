@@ -10,7 +10,7 @@ const Product = () => {
   const [allProduct, setAllProduct] = useState([]);
 
   useEffect(() => {
-    fetchProduct();
+    fetchProducts();
   }, []);
 
   const addProduct = async (e) => {
@@ -26,21 +26,21 @@ const Product = () => {
     setDesc("");
   };
 
-  const fetchProduct = async (e) => {
+  const fetchProducts = async (e) => {
     const res = await api.get("/product/view");
     setAllProduct(res.data);
   };
 
-  const deleteProduct=async(id)=>{
-    await api.delete(`/product/delete/${id}`)
-    setAllProduct(allProduct.filter((product)=>product._id!==id))
-  }
+  const deleteProduct = async (id) => {
+    await api.delete(`/product/delete/${id}`);
+    setAllProduct(allProduct.filter((product) => product._id !== id));
+  };
 
   //console.log(allProduct);
   return (
     <>
       <div className="register">
-        <h2> Welcome ,{user && user.username}</h2>
+        <h2> Welcome ,{user && user.email}</h2>
         <form onSubmit={addProduct}>
           <input
             type="text"
@@ -75,7 +75,8 @@ const Product = () => {
           <tr>
             <th>Name</th>
             <th>Price</th>
-            <th>Description</th>
+            <th> </th>
+            <th> </th>
             <th> </th>
           </tr>
         </thead>
@@ -84,12 +85,22 @@ const Product = () => {
             <tr key={product._id}>
               <td>{product.name}</td>
               <td>$ {product.price}</td>
-              <td>{product.desc}</td>
-              <Link to={`/product/update/${product._id}`}>Edit</Link>  ||
-              <button onClick={()=>deleteProduct(product._id)} className="danger">Delete</button>
+              <td>
+                <Link to={`/product/details/${product._id}`}>Details</Link>
+              </td>
+              <td>
+                <Link to={`/product/update/${product._id}`}>Edit</Link>
+              </td>
+              <td>
+                <button
+                  onClick={() => deleteProduct(product._id)}
+                  className="danger"
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
-
         </tbody>
       </table>
     </>
